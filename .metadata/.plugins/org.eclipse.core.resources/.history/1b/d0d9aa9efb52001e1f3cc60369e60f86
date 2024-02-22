@@ -1,0 +1,6 @@
+package VideoClub;
+
+public class Videojuego extends Productos{
+
+	private enum Estilo{accion, deportes, aventuras, puzzle, infantil};
+}

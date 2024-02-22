@@ -1,0 +1,53 @@
+package Metros100;
+
+import java.util.Random;
+
+public class Atleta implements Runnable{
+
+	public Atleta() {}
+	
+	
+	
+	
+	public Atleta(int dorsal, String pais, String nombre) {
+		super();
+		//this.tiempo = tiempo;
+		this.dorsal = dorsal;
+		this.pais = pais;
+		this.nombre = nombre;
+	}
+
+
+
+
+	double tiempo;
+	int dorsal;
+	String pais;
+	String nombre;
+	@Override
+	public void run() {
+		
+		System.out.println(this.nombre+"preparado");
+		long inicio= System.currentTimeMillis();
+		Random r= new Random();
+		long t=r.nextLong(8000,12000);
+		try {
+			Thread.sleep(t);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(this.nombre+"");
+		long fin= inicio+t;
+		
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Atleta [tiempo=" + tiempo + ", dorsal=" + dorsal + ", pais=" + pais + ", nombre=" + nombre + "]";
+	}
+
+}

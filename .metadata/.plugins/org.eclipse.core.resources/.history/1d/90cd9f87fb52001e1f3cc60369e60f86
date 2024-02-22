@@ -1,0 +1,6 @@
+package VideoClub;
+
+public class Videojuego extends Productos{
+
+	
+}

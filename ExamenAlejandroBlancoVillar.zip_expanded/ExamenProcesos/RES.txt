@@ -1,0 +1,3 @@
+el numero de P es: 5
+el numero de F es: 0
+el numero de Y es: 0

@@ -1,0 +1,29 @@
+package ExamenTercera;
+
+import java.util.ArrayList;
+
+import Ejercicio42.LocalComercial;
+
+public class testApartamentos {
+
+	
+	public static ArrayList<Inmueble> Lista= new ArrayList<>();
+	public static void main(String[] args) {
+		
+		Casa c= new Casa(45,32,"hispanidad",23,543,65);
+		Inmueble i= new Inmueble(0, 0, null);
+		CasaConjuntoCerrado ca= new CasaConjuntoCerrado(0, 0, null, 0, 0, 0, 0, false, false);
+		CasaIndependiente ci = new CasaIndependiente(0, 0, null, 0, 0, 0);
+		Apartaestudio ap= new Apartaestudio(0, 0, null, 0, 0);
+		ApartamentoFamiliar af =new ApartamentoFamiliar(0, 0, null, 0, 0, 0);
+		LocalComercial Lc=new LocalComercial(0, 0, null, null, null);
+		Oficina o = new Oficina(0, 0, null, null, false);
+		
+		Lista.add(c);
+		for (Inmueble i1:Lista) {
+			System.out.println(i1);
+		}
+		
+	}
+	
+}

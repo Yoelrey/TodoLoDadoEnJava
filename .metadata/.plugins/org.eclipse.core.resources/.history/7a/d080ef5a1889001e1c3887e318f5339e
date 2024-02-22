@@ -1,0 +1,62 @@
+package Metros100;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Carrera {
+
+	ArrayList<Atleta>finalistas= new ArrayList<>();
+
+	public Carrera() {
+		
+	}
+	
+	Scanner sc = new Scanner(System.in);
+
+	public int numParticipantes() {
+		System.out.println("Introduzca el numero de participantes: ");
+		int n= sc.nextInt();
+		return n;
+	}
+	
+	public void inicializaCarrera() {
+		int n =numParticipantes();
+		for (int i = 0; i < n; i++) {			
+			System.out.println("Introduzca el nombre");
+			String nombre = sc.nextLine();
+			System.out.println("Introduzca pais");
+			String pais = sc.nextLine();
+			System.out.println("Introduzca el dorsal");
+			int dorsal= sc.nextInt();
+
+			Atleta atleta= new Atleta(dorsal,pais,nombre);
+			finalistas.add(atleta);
+			
+		}
+		sc.close();
+	}
+
+	public void mostrarClasificacion() {
+		Collections.sort(finalistas);
+		System.out.println("Clasificacion");
+
+		for (Atleta atleta : finalistas) {
+			System.out.println(atleta);
+			
+		}
+	}
+	
+	
+	
+	public void correr() {
+	for (Atleta atleta : finalistas) {
+		Thread t =new Thread(atleta);
+		t.start();
+		t.join();
+		
+	}
+		
+		
+	}
+}

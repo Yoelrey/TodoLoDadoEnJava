@@ -1,0 +1,13 @@
+package Metros100;
+
+public class Atleta implements Runnable{
+
+	
+	double tiempo;
+	String nombre;
+	@Override
+	public void run() {
+		
+	}
+
+}

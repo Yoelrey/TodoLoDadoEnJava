@@ -1,0 +1,63 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class JFramePrueba extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField textField;
+	private JButton pulsame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					JFramePrueba frame = new JFramePrueba();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public JFramePrueba() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(40, 26, 96, 19);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JButton saludar = new JButton("Saludar ");
+		saludar.addActionListener(new ManejadorBOtones());
+	
+		
+		pulsame = new JButton("pulsame");
+		pulsame.addActionListener(new ActionListener() {
+		});
+		pulsame.setBounds(51, 126, 85, 21);
+		contentPane.add(pulsame);
+		pulsame.addActionListener(new ManejadorBOtones());
+		
+	}
+}

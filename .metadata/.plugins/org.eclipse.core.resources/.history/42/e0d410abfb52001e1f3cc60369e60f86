@@ -1,0 +1,7 @@
+package VideoClub;
+
+public class Videojuego extends Productos{
+
+	private enum estilo{accion, deportes, aventuras, puzzle, infantil};
+	private enum plataforma{Xbox,PlayStation, Switch};
+}

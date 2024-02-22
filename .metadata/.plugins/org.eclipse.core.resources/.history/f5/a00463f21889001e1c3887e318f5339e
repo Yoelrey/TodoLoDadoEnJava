@@ -1,0 +1,15 @@
+package Metros100;
+
+public class TestCarrera {
+public static void main(String[] args) {
+	Carrera japon = new Carrera();
+	
+	japon.inicializaCarrera();
+	japon.correr();
+	System.out.println("pummmm");
+	japon.mostrarClasificacion();
+	
+	System.out.println("Acabo la prueba");
+	
+}
+}

@@ -1,0 +1,32 @@
+package Metros100;
+
+public class Atleta implements Runnable{
+
+	public Atleta() {}
+	
+	
+	
+	
+	public Atleta(int dorsal, String pais, String nombre) {
+		super();
+		//this.tiempo = tiempo;
+		this.dorsal = dorsal;
+		this.pais = pais;
+		this.nombre = nombre;
+	}
+
+
+
+
+	double tiempo;
+	int dorsal;
+	String pais;
+	String nombre;
+	@Override
+	public void run() {
+		
+		
+		
+	}
+
+}

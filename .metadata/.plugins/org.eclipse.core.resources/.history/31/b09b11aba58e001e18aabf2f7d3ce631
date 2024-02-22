@@ -1,0 +1,7 @@
+package prodcons;
+
+public class TestCola {
+	public static void main(String[] args) {
+		Cola cola= new Cola();
+	}
+}
